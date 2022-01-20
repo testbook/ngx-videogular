@@ -104,7 +104,8 @@ export class VgFullscreenApiService {
 
       // iOS dispatches the fullscreen change event from video element
       case 'webkitendfullscreen':
-        fsElemDispatcher = this.medias.toArray()[0].elem;
+        let media = this.medias.toArray()[0];
+        fsElemDispatcher = media == undefined ? elem : media.elem;
         break;
 
       // HTML5 implementation dispatches the fullscreen change event from the element
@@ -151,7 +152,9 @@ export class VgFullscreenApiService {
           (!this.polyfill.enabled && elem === this.videogularElement) ||
           VgUtilsService.isiOSDevice()
         ) {
-          elem = this.medias.toArray()[0].elem;
+          let media = this.medias.toArray()[0];
+          elem = media == undefined ? elem : media.elem;
+
         }
 
         this.enterElementInFullScreen(elem);
@@ -162,7 +165,25 @@ export class VgFullscreenApiService {
   }
 
   enterElementInFullScreen(elem: any) {
-    elem[this.polyfill.request]();
+    let videoElem = elem.querySelector('video');
+    let vgPlayerElem = document.querySelector('vg-player video');
+    if(elem[this.polyfill.request]){
+        elem[this.polyfill.request]();
+    }else if(videoElem && videoElem['requestFullscreen']){
+        videoElem['requestFullscreen']();
+    }else if(videoElem && videoElem['webkitRequestFullScreen']){
+        videoElem['webkitRequestFullScreen']();
+    } else if(videoElem && videoElem[this.polyfill.request] ){
+        videoElem[this.polyfill.request]();
+    }else if(vgPlayerElem && vgPlayerElem['requestFullscreen']){
+        vgPlayerElem['requestFullscreen']();
+    }else if(vgPlayerElem && vgPlayerElem['webkitRequestFullScreen']){
+        vgPlayerElem['webkitRequestFullScreen']();
+    } else if(vgPlayerElem && vgPlayerElem[this.polyfill.request]) {
+        vgPlayerElem[this.polyfill.request]();
+    } else {
+        console.error("We couldn't make it happen, Patch your own changes on videogular-ngx-videogular-core.js, Thanks TB FE-TEAM");
+    }
   }
 
   exit() {
