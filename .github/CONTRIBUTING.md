@@ -1,6 +1,6 @@
 ## Contributing Guidelines
 
-Hello and thank you for contributing to ngx-videogular!
+Hello and thank you for contributing to tb-videogular!
 
 Please, read this quick guideline to learn how to contribute to the project.
 

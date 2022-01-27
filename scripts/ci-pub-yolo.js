@@ -72,7 +72,7 @@
     console.log('[UPLOADING]');
     console.log();
 
-    await exec(`np ${PUB_OPTIONS} --no-tests --no-cleanup --contents=dist/libs/ngx-videogular`);
+    await exec(`np ${PUB_OPTIONS} --no-tests --no-cleanup --contents=dist/libs/tb-videogular`);
 
     console.log();
     console.log(`${PUB_OPTIONS}`);

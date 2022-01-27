@@ -19,14 +19,14 @@
     }
   },
   "projects": {
-    "ngx-videogular-demo": {
+    "tb-videogular-demo": {
       "tags": []
     },
-    "ngx-videogular-e2e": {
+    "tb-videogular-e2e": {
       "tags": [],
-      "implicitDependencies": ["ngx-videogular"]
+      "implicitDependencies": ["tb-videogular"]
     },
-    "ngx-videogular": {
+    "tb-videogular": {
       "tags": []
     }
   }

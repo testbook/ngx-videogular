@@ -8,7 +8,7 @@ Thank you!
 ### Checklist
 Please, check that you have been followed next steps:
 
-- I've read the (contributing)[https://github.com/videogular/ngx-videogular/blob/master/CONTRIBUTING.md] guidelines
+- I've read the (contributing)[https://github.com/testbook/tb-videogular/blob/master/CONTRIBUTING.md] guidelines
 - Code compiles correctly (run `npm start`)
 - Created tests (if necessary)
 - All tests passing (run `npm test`)

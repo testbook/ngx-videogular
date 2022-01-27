@@ -11,16 +11,16 @@
     "access": "public",
     "registry": "https://registry.npmjs.org",
     "yarn": false,
-    "contents": "dist/libs/ngx-videogular"
+    "contents": "dist/libs/tb-videogular"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/videogular/ngx-videogular.git"
+    "url": "https://github.com/testbook/tb-videogular.git"
   },
   "bugs": {
-    "url": "https://github.com/videogular/ngx-videogular/issues"
+    "url": "https://github.com/testbook/tb-videogular/issues"
   },
-  "homepage": "https://github.com/videogular/ngx-videogular#readme",
+  "homepage": "https://github.com/testbook/tb-videogular#readme",
   "keywords": [
     "video",
     "player",
@@ -33,7 +33,7 @@
     "nx": "nx",
     "help": "nx help",
     "postinstall": "ngcc && node ./decorate-angular-cli.js",
-    "test": "ng test ngx-videogular",
+    "test": "ng test tb-videogular",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
     "start": "ng serve",
@@ -54,18 +54,18 @@
     "update": "ng update @nrwl/workspace",
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
-    "test:commit": "ng test ngx-videogular --watch=false --progress=false --browsers=ChromeHeadless",
-    "test:ci": "ng test ngx-videogular --watch=false --progress=false --browsers=FirefoxHeadless",
-    "build:docs": "cross-env NODE_ENV=production ng build ngx-videogular-demo --configuration production --base-href \"https://videogular.github.io/ngx-videogular/\" && cd docs/ngx-videogular-demo && gitbook install && gitbook build && cd -",
+    "test:commit": "ng test tb-videogular --watch=false --progress=false --browsers=ChromeHeadless",
+    "test:ci": "ng test tb-videogular --watch=false --progress=false --browsers=FirefoxHeadless",
+    "build:docs": "cross-env NODE_ENV=production ng build tb-videogular-demo --configuration production --base-href \"https://videogular.github.io/tb-videogular/\" && cd docs/tb-videogular-demo && gitbook install && gitbook build && cd -",
     "predeploy": "npm run build:docs",
-    "deploy:docs": "angular-cli-ghpages --dir ./dist/docs/ngx-videogular-demo --name=Videogular --email=jaime.amo18@gmail.com",
-    "copy-files": "cp README.md dist/libs/ngx-videogular/README.md && cp LICENSE dist/libs/ngx-videogular/LICENSE",
+    "deploy:docs": "angular-cli-ghpages --dir ./dist/docs/tb-videogular-demo --name=Videogular --email=jaime.amo18@gmail.com",
+    "copy-files": "cp README.md dist/libs/tb-videogular/README.md && cp LICENSE dist/libs/tb-videogular/LICENSE",
     "build:css": "node scripts/fonts-cpt.js",
-    "build:lib": "ng build ngx-videogular --configuration production && npm run build:css && npm run copy-files",
-    "publish:lib": "npm publish ./dist/libs/ngx-videogular",
-    "publish:ci": "npm run build:lib && ng deploy ngx-videogular",
+    "build:lib": "ng build tb-videogular --configuration production && npm run build:css && npm run copy-files",
+    "publish:lib": "npm publish ./dist/libs/tb-videogular",
+    "publish:ci": "npm run build:lib && ng deploy tb-videogular",
     "package": "npm run build:lib",
-    "pack": "npm pack ./dist/libs/ngx-videogular",
+    "pack": "npm pack ./dist/libs/tb-videogular",
     "release:local": "np",
     "release:ci": "node scripts/ci-pub-yolo.js"
   },

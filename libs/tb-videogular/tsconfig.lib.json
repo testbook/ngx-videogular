@@ -1,0 +1,40 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/libs/tb-videogular",
+    "baseUrl": ".",
+    "target": "es2015",
+    "module": "esnext",
+    "stripInternal": false,
+    "moduleResolution": "node",
+    "newLine": "lf",
+    "declaration": true,
+    "importHelpers": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["dom", "es2015", "es5"],
+    "types": [],
+    "paths": {
+      "@testbook/tb-videogular/*": ["./*/src/index"]
+    }
+  },
+  "files": ["public-api.ts"],
+  "include": ["**/*.ts"],
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts"
+  ],
+  "angularCompilerOptions": {
+    "enableIvy": false,
+    "annotateForClosureCompiler": true,
+    "strictMetadataEmit": true,
+    "flatModuleOutFile": "index.js",
+    "flatModuleId": "@testbook/tb-videogular",
+    "skipTemplateCodegen": true,
+    "enableResourceInlining": true,
+  }
+}

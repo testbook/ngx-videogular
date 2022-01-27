@@ -6,14 +6,14 @@ const CleanCss = require('clean-css');
 const cpx = require('cpx');
 const postcss = require('postcss');
 const autoprefixer = require('autoprefixer');
-const { version } = require('../libs/ngx-videogular/package.json');
+const { version } = require('../libs/tb-videogular/package.json');
 
 const copyDir = () =>
   new Promise((resolve, reject) => {
     console.log(`Copying fonts...`);
     console.log();
 
-    cpx.copy(`libs/ngx-videogular/fonts/*`, `dist/libs/ngx-videogular/fonts`, err => {
+    cpx.copy(`libs/tb-videogular/fonts/*`, `dist/libs/tb-videogular/fonts`, err => {
       if (err) {
         return reject(err);
       }
@@ -35,7 +35,7 @@ const compileCss = () =>
     console.log(`Let the water hold me down`);
     console.log();
 
-    fs.readFile('dist/libs/ngx-videogular/fonts/videogular.css', (err, data) => {
+    fs.readFile('dist/libs/tb-videogular/fonts/videogular.css', (err, data) => {
       if (err) {
         return reject(err);
       }
@@ -43,7 +43,7 @@ const compileCss = () =>
       sass.render(
         {
           data: `$pkgVersion:'${version}';${data}`,
-          includePaths: ['dist/libs/ngx-videogular/fonts']
+          includePaths: ['dist/libs/tb-videogular/fonts']
         },
         (err, result) => {
           if (err) {
@@ -56,7 +56,7 @@ const compileCss = () =>
             .then(({ css }) => {
               const cssMinifier = new CleanCss();
               const minifiedCss = cssMinifier.minify(css).styles;
-              fs.writeFile('dist/libs/ngx-videogular/fonts/videogular.css', minifiedCss, err => {
+              fs.writeFile('dist/libs/tb-videogular/fonts/videogular.css', minifiedCss, err => {
                 if (err) {
                   return reject(err);
                 }
