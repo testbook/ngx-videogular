@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/testbook/tb-videogular.git"
+    "url": "https://github.com/testbook/tb-testbook.git"
   },
   "bugs": {
     "url": "https://github.com/testbook/tb-videogular/issues"
@@ -56,7 +56,7 @@
     "dep-graph": "nx dep-graph",
     "test:commit": "ng test tb-videogular --watch=false --progress=false --browsers=ChromeHeadless",
     "test:ci": "ng test tb-videogular --watch=false --progress=false --browsers=FirefoxHeadless",
-    "build:docs": "cross-env NODE_ENV=production ng build tb-videogular-demo --configuration production --base-href \"https://videogular.github.io/tb-videogular/\" && cd docs/tb-videogular-demo && gitbook install && gitbook build && cd -",
+    "build:docs": "cross-env NODE_ENV=production ng build tb-videogular-demo --configuration production --base-href \"https://testbook.github.io/tb-videogular/\" && cd docs/tb-videogular-demo && gitbook install && gitbook build && cd -",
     "predeploy": "npm run build:docs",
     "deploy:docs": "angular-cli-ghpages --dir ./dist/docs/tb-videogular-demo --name=Videogular --email=jaime.amo18@gmail.com",
     "copy-files": "cp README.md dist/libs/tb-videogular/README.md && cp LICENSE dist/libs/tb-videogular/LICENSE",

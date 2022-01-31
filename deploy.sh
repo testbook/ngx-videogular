@@ -18,7 +18,7 @@ git init
 git config user.name "Jaime Oliveira"
 git config user.email "jaime.amo18@gmail.com"
 
-git remote add upstream "https://$GH_TOKEN@github.com/videogular/tb-videogular.git"
+git remote add upstream "https://$GH_TOKEN@github.com/videogular/tb-testbook.git"
 git fetch upstream
 git reset upstream/gh-pages
 

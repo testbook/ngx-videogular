@@ -8,14 +8,14 @@
 
 **tb-videogular is an HTML5 video player for Angular 2.0**. Videogular is a wrapper over the HTML5 video tag, so you can just add whatever you want. This provides a very powerful, but simple to use solution, for everybody.
 
-:tv: [Showcase](https://videogular.github.io/tb-videogular-showroom/#/)
+:tv: [Showcase](https://testbook.github.io/tb-videogular-showroom/#/)
 
-:books: [Documentation](https://videogular.github.io/tb-videogular/docs)
+:books: [Documentation](https://testbook.github.io/tb-videogular/docs)
 
 ## Moving from Videogular2 to tb-videogular
 
 Since `videogular2` is unmaintained, we suggest moving to `@testbook/tb-videogular`. </br>
-You can check out the [migration guide here](https://videogular.github.io/tb-videogular/docs/migrating-from-videogular2/).
+You can check out the [migration guide here](https://testbook.github.io/tb-videogular/docs/migrating-from-videogular2/).
 
 ### 48% reduction on bundle size? Ivy Support? </br> All of that and more!
 
@@ -26,7 +26,7 @@ For DashJS v2 compatiblity, please use @testbook/tb-videogular version < 2.0.1.
 
 ## How to install
 
-To get up and running quickly, check out the [getting started guide](https://videogular.github.io/tb-videogular/docs/getting-started/).
+To get up and running quickly, check out the [getting started guide](https://testbook.github.io/tb-videogular/docs/getting-started/).
 
 ### NPM commands
 
